@@ -14,4 +14,4 @@ print(exemplo[21:]) #[indice inicial :]
 
 #Você pode colocar o conceito de passo também em seu fatiamento: 
 
-print(exemplo[0:27:2])
+print(exemplo[0:27:2]) #Pode usar o conceito de indice final e inicial anterior citado, ex: [::2]

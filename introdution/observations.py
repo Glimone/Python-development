@@ -13,6 +13,24 @@
 #você também pode ver o endereço de memória de um elemento em seu código, usando o id() nele.
 
 #Ex: 
+# addresstest = 124 ** 2
+# print(id(addresstest))
 
-addresstest = 124 ** 2
-print(id(addresstest))
+#Temos o conceito de "IS" e "IS NOT", que significa "É" e "Não É".
+
+#While - Estrutura de repetição, que significa "Enquanto". Ele Analisa primeiro a condição e depois solta o código.
+
+#Break - Serve pra quebrar um código. Muito usado em repetições.
+
+#Ex While: """
+# 
+# x = 0 
+# while x < 10:
+#   x += 1
+#   print(x) Isso irá imprimir 
+# 
+# repetidamente x + 1 = 1, x + 1 = 2, até 10.
+# """
+
+#Outra palavra reservada é o continue, cujo quando usado, faz com que o código continue, entretanto da parte inicial do loop.
+
