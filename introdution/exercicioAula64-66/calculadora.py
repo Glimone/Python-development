@@ -12,9 +12,10 @@ while True:
     print("Você está na cálculadora de operações básicas!".upper())
     print("---------------------------------------------------")
     sair = input("Você deseja sair? [s]im ou [n]ão? \n")
+    sair = sair.lower()
     if sair == "s":
         break
-    else:   
+    elif sair == "n": 
         print("Escolha abaixo o tipo de operação que deseja fazer: ")
         print("Para SOMA, digite: + \n")
         print("Para SUBTRAÇÃO, digite: - \n")
