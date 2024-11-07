@@ -34,3 +34,11 @@
 
 #Outra palavra reservada é o continue, cujo quando usado, faz com que o código continue, entretanto da parte inicial do loop.
 
+#range() serve pra criar uma sequência de números. Tem como parâmetros de uso: Start, Stop e Step.
+    #Start - Se trata do inicio. Ex: range(5)
+    #Stop - Onde irá finalizar a sequência. Ex: range(5, 12)
+    #Step - Quantidade de "pulos" na sequência. Ex: range(5, 12, 3)
+    #Isso imprimiria 5, 8 e 11.
+
+#Sintaxe: range(Start, Stop, Step)
+

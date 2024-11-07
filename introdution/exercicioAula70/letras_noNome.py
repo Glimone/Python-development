@@ -23,3 +23,16 @@ while contador < len(frase):
     contador += 1 
 
 print(F"A letra que apareceu mais vezes foi {letra_principal}, em {qnt_letra_principal}x.")
+
+
+
+
+
+
+
+
+
+
+
+
+
