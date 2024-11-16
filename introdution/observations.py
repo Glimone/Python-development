@@ -41,4 +41,3 @@
     #Isso imprimiria 5, 8 e 11.
 
 #Sintaxe: range(Start, Stop, Step)
-
