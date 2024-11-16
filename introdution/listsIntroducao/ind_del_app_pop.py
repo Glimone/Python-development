@@ -12,3 +12,8 @@ print(lista)
 
 lista.pop() #Remove o último elemento da lista.
 print(lista)
+
+print(len(lista)) 
+lista.insert(5, 25) #Insert serve pra adicionar um valor em um indice específicado.
+           #Ordem: (indice, valor)
+print(lista)
