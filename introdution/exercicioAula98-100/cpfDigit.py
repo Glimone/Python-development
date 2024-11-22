@@ -1,34 +1,71 @@
-cpf = input("Informe os 9 digitos do seu CPF, vamos adivinhar o penúltimo:  ")
+try:
+    cpf = input("Informe os 9 dígitos do seu CPF, vamos adivinhar os 2 últimos (sem pontos ou hífens): ")
 
-cpf_list = list(str(cpf))
-cpf_list.extend(["0", "0"])
+    if not cpf.isdigit() or len(cpf) != 9:
+        raise ValueError("Você deve informar exatamente 9 números! Reinicie o jogo de adivinhação.")
 
-i_list = []
-reverse_ind_list = []
-c_list = []
+except ValueError as e:
+    print(e)
+    exit() 
+cpf_first_list = list(str(cpf))
+cpf_first_list.extend(["0", "0"])
 
-for i,x in enumerate(cpf_list):
+i_first = []
+first_reverse_list = []
+first_list_mult = []
+
+for i,x in enumerate(cpf_first_list):
     x = int(x)
-    i_list.append(i)
-    reverse_ind_list = list(reversed(i_list))
+    i_first.append(i)
+    first_reverse_list = list(reversed(i_first))
     
 
-for a,b in zip(cpf_list, reverse_ind_list):
+for a,b in zip(cpf_first_list, first_reverse_list):
     a = int(a)
     c = a * b 
-    c_list.append(c)
+    first_list_mult.append(c)
     
-*essenciais, _, _ = c_list
+*essenciais, _, _ = first_list_mult
 
-soma = 0
-for i in essenciais:
-    soma = soma + i
-    
-result = (soma * 10) % 11
+first_soma = sum(essenciais)
+
+first_number = (first_soma * 10) % 11
 
 
-if result < 9:
-    print(f"O penultimo dígito do seu cpf é: {result}")
-elif result > 9:
-    result = 0
-    print(f"O penultimo dígito do seu cpf é: {result}")
+
+#-------------- 2 DIGITO -------------#
+
+cpf_second_list = cpf_first_list
+del cpf_second_list[9:]
+cpf_second_list.extend([first_number, '0', '0'])
+
+i_second = []
+second_reverse_list = []
+second_list_mult = []
+
+for i,x in enumerate(cpf_second_list):
+    x = int(x)
+    i_second.append(i)
+    second_reverse_list = list(reversed(i_second))
+
+for a,b in zip(cpf_second_list, second_reverse_list):
+    a = int(a)
+    c = a * b 
+    second_list_mult.append(c)
+
+*essenciais2, _, _ = second_list_mult
+
+second_soma = sum(essenciais2)
+
+
+second_number = (second_soma * 10) % 11
+
+
+#------------ Return to client ------------#
+
+
+if first_number < 9 and second_number < 9:
+    print(f"O seu CPF completo é: {cpf}-{first_number}{second_number}!")
+elif first_number > 9:
+    first_number = 0
+    print(f"O seu CPF completo é: {cpf}-{first_number}-{second_number}!")
