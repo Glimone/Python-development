@@ -72,4 +72,4 @@ elif first_number > 9:
     print(f"O seu CPF completo é: {cpf}-{first_number}{second_number}!")
 elif second_number > 9:
     second_number = 0
-    print(f"O seu CPF completo é: {cpf}-{first_number}{second_number}!")
+    print(f"O seu CPF completo é: {cpf}-{first_number}{second_number}!") 
