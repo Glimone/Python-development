@@ -1,12 +1,13 @@
 try:
-    cpf = input("Informe os 9 dígitos do seu CPF, vamos adivinhar os 2 últimos (sem pontos ou hífens): ")
+    cpf = input("Informe os 9 dígitos do seu CPF, vamos informar os 2 últimos (sem pontos ou hífens): ")
 
     if not cpf.isdigit() or len(cpf) != 9:
-        raise ValueError("Você deve informar exatamente 9 números! Reinicie o jogo de adivinhação.")
+        raise ValueError("Você deve informar exatamente 9 números! Reinicie o terminal.")
 
 except ValueError as e:
     print(e)
     exit() 
+    
 cpf_first_list = list(str(cpf))
 cpf_first_list.extend(["0", "0"])
 
@@ -68,4 +69,7 @@ if first_number < 9 and second_number < 9:
     print(f"O seu CPF completo é: {cpf}-{first_number}{second_number}!")
 elif first_number > 9:
     first_number = 0
-    print(f"O seu CPF completo é: {cpf}-{first_number}-{second_number}!")
+    print(f"O seu CPF completo é: {cpf}-{first_number}{second_number}!")
+elif second_number > 9:
+    second_number = 0
+    print(f"O seu CPF completo é: {cpf}-{first_number}{second_number}!")
