@@ -1,3 +1,4 @@
+import random
 #Multiplicação dos valores
 def multiplicator(*args):
     acumulador = 1
